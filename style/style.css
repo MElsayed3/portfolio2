@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+  }
+/* Container */
+.container{
+    background: linear-gradient(to right, rgb(17, 14, 19), rgb(104, 65, 56));
+}
+
+
+.container{
+    background: linear-gradient(to right, rgb(17, 14, 19), rgb(20, 12, 11));
+}
+/* avatar hero section */
+
+.me{
+    background-color: rgb(29, 9, 1);
+    background: linear-gradient(central,rgb(1, 37, 48), rgb(44, 32, 24));
+}
+
+
+/* navbar */
+.nav-scrolled {
+  background: linear-gradient(to right, rgb(31,19,17), rgb(60,40,35));
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
