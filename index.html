@@ -26,6 +26,8 @@
 
 
   <title>Mohamed Elsayed | Web Developer & Data Analyst</title>
+  <link rel="icon" href="IMG/laptopIcon.svg" type="image/x-icon">
+
   <link rel="icon" type="image/x-icon" href="IMG/coding.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -43,7 +45,7 @@
         <div class="max-w-6xl mx-auto px-4 flex justify-between h-16">
             <!-- Logo -->
             <h1 class="flex items-center text-2xl font-bold text-white">
-            <a href="#home"><span>Mohamed Elsayed</span>
+            <a href="#hero"><span>Mohamed Elsayed</span>
                 <i class="fa-solid fa-laptop-code text-orange-500 ml-2"></i>
             </a>
             </h1>
@@ -107,11 +109,11 @@
 
 
 <!-- Hero Section -->
-<div id="hero" class="w-full bg-cover bg-left pt-16"> 
-  <section id="home" 
-    class="max-w-6xl mx-auto md:h-screen px-4 py-20 md:py-52
-           flex flex-col md:flex-row items-center justify-between text-left">
-    
+<div id="hero" class="h-full w-full pt-16 section"> 
+<section id="home" 
+  class="max-w-6xl mx-auto md:h-screen px-4 py-20 md:py-52
+         flex flex-col-reverse md:flex-row items-center justify-between text-left">
+
     <!-- Left side: text -->
     <div class="flex-1 text-center md:text-left">
         <h3 class="text-3xl md:text-4xl text-gray-200 font-bold mb-4">
@@ -192,7 +194,7 @@
 
 
 <!-- About Me Section -->
-<div id="about" class="w-full bg-cover bg-left pt-16 bg-[rgb(31,19,17)]">
+<div id="about" class="h-full w-full bg-cover bg-left pt-16 bg-[rgb(31,19,17)] section">
   <section class="max-w-6xl mx-auto px-4 py-4">
     
     <!-- Section Heading -->
@@ -239,7 +241,7 @@
 
 
 <!-- Services Section -->
-<div id="services" class="w-full pt-16">
+<div id="services" class="h-full w-full pt-16 section">
   <section class="max-w-6xl mx-auto px-4 py-6">
 
     <!-- Services Heading -->
@@ -313,7 +315,7 @@
 
 
   <!-- Projects Section -->
-  <div id="projects" class="w-full pt-16">
+  <div id="projects" class="h-full w-full pt-16 section">
   <section class="max-w-6xl mx-auto px-4 py-8">
 
     <!-- Projects Heading -->
@@ -382,7 +384,7 @@
 
   
   <!-- Skills -->
-<div id="skills" class="w-full bg-cover bg-left pt-16 bg-[rgb(31,19,17)]">
+<div id="skills" class="h-full w-full bg-cover bg-left pt-16 bg-[rgb(31,19,17)] section">
   <section class="max-w-6xl mx-auto px-4 py-4">
     
     <!-- Section Heading -->
@@ -549,8 +551,8 @@
 
 
   <!-- Contact -->
-
-<section id="contact" class="max-w-5xl mx-auto px-4 py-2 text-center fade-scroll">
+<div id="contact" class="h-full w-full pt-16 section">
+<section class="max-w-5xl mx-auto px-4 py-2 text-center fade-scroll">
   <h2 class="text-3xl font-bold mb-8 text-orange-500">Contact Me</h2>
 
 <div data-aos="fade-down" class="flex justify-center mb-6">
@@ -591,6 +593,7 @@
     </a>
   </div>
 </section>
+</div>
 <!-- end of contact section -->
 
 

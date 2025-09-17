@@ -15,39 +15,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+
+
+
     // Change navbar background on scroll
-     const navbar = document.querySelector("nav");
+    //global variables
+  const navbar = document.querySelector("nav");
   const hero = document.getElementById("hero");
-  const sections = document.querySelectorAll("section, div[id]"); // all sections with id
-  const navLinks = document.querySelectorAll("nav a");
+
+  
+  
+    //change active nav item on scroll
+    function updateActiveNav() {
+    const sections = document.querySelectorAll('div.section');
+    const navItems = document.querySelectorAll('nav ul li a[href^="#"]');
+    const scrollPos = window.scrollY || document.documentElement.scrollTop;
+    const mid = scrollPos + window.innerHeight / 4;
+
+    let current = '';
+    sections.forEach(section => {
+      const top = section.offsetTop;
+      const bottom = top + section.offsetHeight;
+      if (mid >= top && mid < bottom) {
+        current = section.id;
+      }
+    });
+
+    navItems.forEach(item => {
+      item.parentElement.classList.toggle('bg-orange-900', item.getAttribute('href') === `#${current}`);
+    });
+    }
+    updateActiveNav(); 
+
 
   window.addEventListener("scroll", () => {
+    updateActiveNav(); // Update active nav item on scroll
     const heroBottom = hero.offsetHeight;
 
-    // ✅ 1. Change navbar background after hero
-    if (window.scrollY > heroBottom - 80) {
+    //Change navbar background after hero
+    if (window.scrollY > heroBottom - heroBottom / 1.1) {
         navbar.classList.add("nav-scrolled");
     } else {
         navbar.classList.remove("nav-scrolled");
     }
+  // window.addEventListener('resize', () => requestAnimationFrame(updateActiveNav));
 
-    // ✅ 2. Highlight active nav link
-    let current = "";
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 100; // offset so it switches earlier
-      const sectionHeight = section.clientHeight;
-
-      if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-        current = section.getAttribute("id");
-      }
-    });
-
-    navLinks.forEach((link) => {
-      link.classList.remove("text-orange-500");
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("text-orange-500");
-      }
-    });
   });
+ 
+
+  
 
 });

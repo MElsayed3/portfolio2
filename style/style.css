@@ -16,14 +16,6 @@ html {
 .container{
     background: linear-gradient(to right, rgb(17, 14, 19), rgb(20, 12, 11));
 }
-/* avatar hero section */
-
-.me{
-    background-color: rgb(29, 9, 1);
-    background: linear-gradient(central,rgb(1, 37, 48), rgb(44, 32, 24));
-}
-
-
 /* navbar */
 .nav-scrolled {
   background: linear-gradient(to right, rgb(31,19,17), rgb(60,40,35));
